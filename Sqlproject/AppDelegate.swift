@@ -11,11 +11,35 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    //step-1
+     var dbPath = ""
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+     // MARK: - step 1 file find
+                     let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                           print(docPath)
+                  
+                     //MARK: step 2 Copy and paste file
+                        self.dbPath = docPath + "/Sd.db"
+                     
+                     
+                      if(!FileManager.default.fileExists(atPath: self.dbPath))
+                             {
+                                 let bundleDBPath = Bundle.main.path(forResource: "Sd", ofType: "db")
+                                 
+                                 do{
+                                     try FileManager.default.copyItem(atPath: bundleDBPath!, toPath: self.dbPath)
+                                 }
+                                 catch(let err as NSError)
+                                 {
+                                     print(err.localizedDescription)
+                                 }
+                                 
+                             }
+                     
+               // Override point for
         return true
     }
 

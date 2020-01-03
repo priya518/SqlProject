@@ -16,6 +16,9 @@
 		F006BFF223B0AA5400BA5ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F006BFF023B0AA5400BA5ECB /* LaunchScreen.storyboard */; };
 		F006BFFD23B0AA5500BA5ECB /* SqlprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006BFFC23B0AA5500BA5ECB /* SqlprojectTests.swift */; };
 		F006C00823B0AA5500BA5ECB /* SqlprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006C00723B0AA5500BA5ECB /* SqlprojectUITests.swift */; };
+		F006C01623B0AB7900BA5ECB /* Sd.db in Resources */ = {isa = PBXBuildFile; fileRef = F006C01523B0AB7900BA5ECB /* Sd.db */; };
+		F006C01923B0AD8300BA5ECB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006C01823B0AD8300BA5ECB /* File.swift */; };
+		F006C01C23B0ADD600BA5ECB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F006C01B23B0ADBD00BA5ECB /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		F006C00323B0AA5500BA5ECB /* SqlprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqlprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F006C00723B0AA5500BA5ECB /* SqlprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlprojectUITests.swift; sourceTree = "<group>"; };
 		F006C00923B0AA5500BA5ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F006C01523B0AB7900BA5ECB /* Sd.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sd.db; path = ../../../Sd.db; sourceTree = "<group>"; };
+		F006C01823B0AD8300BA5ECB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		F006C01B23B0ADBD00BA5ECB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F006C01D23B0AE4300BA5ECB /* Sqlproject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sqlproject-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F006C01C23B0ADD600BA5ECB /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,7 @@
 				F006BFFB23B0AA5500BA5ECB /* SqlprojectTests */,
 				F006C00623B0AA5500BA5ECB /* SqlprojectUITests */,
 				F006BFE023B0AA4F00BA5ECB /* Products */,
+				F006C01A23B0ADBC00BA5ECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +110,8 @@
 		F006BFE123B0AA4F00BA5ECB /* Sqlproject */ = {
 			isa = PBXGroup;
 			children = (
+				F006C01723B0AD6C00BA5ECB /* db */,
+				F006C01523B0AB7900BA5ECB /* Sd.db */,
 				F006BFE223B0AA4F00BA5ECB /* AppDelegate.swift */,
 				F006BFE423B0AA4F00BA5ECB /* SceneDelegate.swift */,
 				F006BFE623B0AA4F00BA5ECB /* ViewController.swift */,
@@ -129,6 +140,23 @@
 				F006C00923B0AA5500BA5ECB /* Info.plist */,
 			);
 			path = SqlprojectUITests;
+			sourceTree = "<group>";
+		};
+		F006C01723B0AD6C00BA5ECB /* db */ = {
+			isa = PBXGroup;
+			children = (
+				F006C01823B0AD8300BA5ECB /* File.swift */,
+				F006C01D23B0AE4300BA5ECB /* Sqlproject-Bridging-Header.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		F006C01A23B0ADBC00BA5ECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F006C01B23B0ADBD00BA5ECB /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +227,7 @@
 				TargetAttributes = {
 					F006BFDE23B0AA4F00BA5ECB = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					F006BFF723B0AA5500BA5ECB = {
 						CreatedOnToolsVersion = 11.3;
@@ -235,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F006C01623B0AB7900BA5ECB /* Sd.db in Resources */,
 				F006BFF223B0AA5400BA5ECB /* LaunchScreen.storyboard in Resources */,
 				F006BFEF23B0AA5400BA5ECB /* Assets.xcassets in Resources */,
 				F006BFEA23B0AA4F00BA5ECB /* Main.storyboard in Resources */,
@@ -262,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F006C01923B0AD8300BA5ECB /* File.swift in Sources */,
 				F006BFE723B0AA4F00BA5ECB /* ViewController.swift in Sources */,
 				F006BFE323B0AA4F00BA5ECB /* AppDelegate.swift in Sources */,
 				F006BFED23B0AA4F00BA5ECB /* Sqlproject.xcdatamodeld in Sources */,
@@ -438,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7227VAQ96L;
 				INFOPLIST_FILE = Sqlproject/Info.plist;
@@ -447,8 +479,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Tipsy.com.Sqlproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sqlproject/db/Sqlproject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7227VAQ96L;
 				INFOPLIST_FILE = Sqlproject/Info.plist;
@@ -465,8 +500,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Tipsy.com.Sqlproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sqlproject/db/Sqlproject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
